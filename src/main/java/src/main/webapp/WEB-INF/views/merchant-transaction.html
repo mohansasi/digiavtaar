@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>SBI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link href="../../../resources/images/favicon.ico" rel="icon" media="screen" th:href="@{/resources/images/favicon.ico}"/> 
+<link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+<link href="../../../resources/css/sbi-styles.css" rel="stylesheet" media="screen" th:href="@{/resources/css/sbi-styles.css}"/>
+<link href="../../../resources/css/quisk-styles.css" rel="stylesheet" media="screen" th:href="@{/resources/css/quisk-styles.css}"/>
+</head>
+<body id="quiskBody">
+
+<nav class="navbar navbar-fixed-top navbar-custom affix-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+             
+                <a class="navbar-brand" href="#"><img src="/sbi/resources/images/sbi-logo-header.png" /></a>
+               
+            </div>
+            <div class="dashboard-head-text">Merchant Dashboard </div>
+			<div class="co-power">Powered by &nbsp;<img alt="" src="/sbi/resources/images/QuiskLogoSBI.png"/></div>
+			
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+<section id="quisk-content">
+<div class="container-full">
+            <div class="row">
+                <div class="col-lg-12">
+<div class="col-md-6 col-sm-6">
+  <input type="hidden" th:value="${timmerCount}" id="timmerCount" />
+  <input type="hidden" th:value="${merchantId1}" id="merchantId1" />
+  <input type="hidden" th:value="${merchantId2}" id="merchantId2" />
+  <span id="merchantHistory1">
+  <h3 >&nbsp;</h3>
+ <div class="trid-bt"><span>0</span>Total Transactions </div>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Transaction Id</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th>Type</th>
+      <th>Date Time</th>
+    </tr>
+  </thead>
+  <tbody id="">
+   
+  </tbody>
+</table>
+  </span>
+
+</div>
+<div class="col-md-6 col-sm-6 adjustcol" >
+  <span id="merchantHistory2">
+  <h3 >&nbsp;</h3>
+ <div class="trid-bt"><span>0</span>Total Transactions </div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Transaction Id</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th>Type</th>
+      <th>Date Time</th>
+    </tr>
+  </thead>
+  <tbody id="">
+   
+  </tbody>
+</table>
+</span>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+    <!-- Footer -->
+<script src="sbi/resources/js/jquery-latest.min.js" th:src="@{/resources/js/jquery-latest.min.js}"></script>
+<script src="sbi/resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script> 
+
+<script src="sbi/resources/js/jquery-ui.min.js" th:src="@{/resources/js/jquery-ui.min.js}"></script>
+<script src="sbi/resources/js/merchant-transaction.js" th:src="@{/resources/js/merchant-transaction.js}"></script>
+</body>
+
+</html>

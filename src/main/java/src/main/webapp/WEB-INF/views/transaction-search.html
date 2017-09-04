@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>SBI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link href="../../../resources/images/favicon.ico" rel="icon" media="screen" th:href="@{/resources/images/favicon.ico}"/> 
+<link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+<link href="../../../resources/css/sbi-styles.css" rel="stylesheet" media="screen" th:href="@{/resources/css/sbi-styles.css}"/>
+<link href="../../../resources/css/quisk-styles.css" rel="stylesheet" media="screen" th:href="@{/resources/css/quisk-styles.css}"/>
+</head>
+<body id="quiskBody">
+
+<nav class="navbar navbar-fixed-top navbar-custom affix-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+             
+                <a class="navbar-brand" href="#"><img src="/sbi/resources/images/sbi-logo-header.png" /></a>
+            </div>
+            <div class="co-power search">Powered by &nbsp;<img alt="" src="/sbi/resources/images/QuiskLogoSBI.png"/></div>
+
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+<section id="quisk-content">
+<div class="container">
+            <div class="row">
+             <div class="col-md-12 col-sm-12 searchform">
+              <p class="error" id="errorMessage"></p>
+            <form id="searchId"  >
+                Enter Phone Number : <input class=" form-control searchphonenumaber" type="text" name="phoneNumber" id="phoneNumber"/> <input class="btn btn-success" type="button" value="Search" id="searchTransaction"/>
+                <input class="btn btn-success" type="button" value="Reset" id="reset"/>
+            </form>
+           
+            </div>
+            <div class="col-md-12 col-sm-12 tablesearch ">
+				  <span id="merchantCount3">
+				  </span>
+				<table class="table table-striped ">
+				  <thead>
+				    <tr>
+				      <th style="text-align:center; width:65%;">SMS Text</th>
+				       <th style="width:15%;">Date Time</th>
+				      <th style="width:20%;word-break: break-all;">Status</th>
+				    </tr>
+				  </thead>
+				    <tbody id="searchTransactionId">
+					     <tr>
+							<td colspan="3" align="center" class="error" style="width:100%;">No Data Available</td>
+					  	</tr>
+ 				 	</tbody>
+				</table>
+				</div>
+</div>
+</div>
+</section>
+
+    <!-- Footer -->
+<script src="sbi/resources/js/jquery-latest.min.js" th:src="@{/resources/js/jquery-latest.min.js}"></script>
+<script src="sbi/resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script> 
+
+<script src="sbi/resources/js/jquery-ui.min.js" th:src="@{/resources/js/jquery-ui.min.js}"></script>
+<script src="sbi/resources/js/merchant-transaction.js" th:src="@{/resources/js/transaction-search.js}"></script>
+</body>
+
+</html>

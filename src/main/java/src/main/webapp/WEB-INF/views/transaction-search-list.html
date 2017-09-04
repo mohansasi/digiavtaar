@@ -1,0 +1,8 @@
+  <tr role="row" class="odd" th:each="searchSMSResponseVO,iterationStatus : ${transactionSearchList}" th:unless="${transactionSearchList == null}">
+		<td style="width:65%" th:text="${searchSMSResponseVO.message}"></td>
+    	<td style="width:15%" th:text="${searchSMSResponseVO.dateTime}"></td>
+    	<td style="width:20%" class="test-wrap" th:text="${searchSMSResponseVO.smsSentStatus}"></td>
+  </tr>
+    <tr role="row" class="odd" th:unless="${transactionSearchList != null}">
+		<td colspan="3" class="error" align="center">No Data Available</td>
+  	</tr>

@@ -1,0 +1,24 @@
+<h3 th:text="${merchantName}" th:unless="${merchantName == null}"></h3>
+<h3  th:unless="${merchantName != null}">&nbsp;</h3>
+<div class="trid-bt"><span th:text="${#lists.size(creditTransactionList)}" th:unless="${creditTransactionList == null}"></span>Total Transactions </div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="trid">Transaction Id</th>
+      <th>Description</th>
+      <th>Amount</th>
+       <th>Type</th>
+      <th>Date Time</th>
+    </tr>
+  </thead>
+   <tbody id="">
+   <tr role="row" class="odd" th:each="merchantTransactionHistoryResponseVO,iterationStatus : ${transactionHistory}" th:unless="${transactionHistory == null}">
+ 	 <td scope="row"  th:text="${merchantTransactionHistoryResponseVO.transactionId}"></td>
+     <td th:text="${merchantTransactionHistoryResponseVO.transactionDescription}"></td>
+     <td th:text="${merchantTransactionHistoryResponseVO.formattedTransactionAmount}"></td>
+     <td th:text="${merchantTransactionHistoryResponseVO.transactionType}"></td>
+     <td th:text="${merchantTransactionHistoryResponseVO.formattedTransactionDate}"></td>
+  </tr>
+  </tbody>
+</table>
+ 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>SBI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link href="../../../resources/images/favicon.ico" rel="icon" media="screen" th:href="@{/resources/images/favicon.ico}"/> 
+<link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+<link href="../../../resources/css/sbi-styles.css" rel="stylesheet" media="screen" th:href="@{/resources/css/sbi-styles.css}"/>
+</head>
+
+<body id="quiskBody">
+
+    <!-- Navigation -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 quiskloginconent">
+                         <div class="col-md-6 left">
+                                <div class="qusik-login-form left">
+                                    <img src="/sbi/resources/images/new-sbi-lock-logo.png"  class="sbi-lock img-responsive"/>
+                                </div>
+                            </div>
+                        <div class="col-md-6">
+                            <div align="center">
+                                        <img src="/sbi/resources/images/sbi-logo.png" width="240" class="img-responsive"/>
+                                </div>
+
+                                <div class="qusik-login-form">
+                                        <div class="form-area">  
+                                            <h2>Please Enter Your Details</h2>
+                                            <p role="alert" class=" text-danger" id="errorMessage" th:text="${SuccessMessage}"></p>
+                                            <form role="form" th:action="@{register}" method="POST" id="registerForm">
+                                            <input type="hidden"  id="delimeterId" th:value="#{register.name.delimiter}" />
+                                            <div class="loginform-inner">
+                                                        <div class="form-group">
+                                                            <i><img src="/sbi/resources/images/user.png"/></i>
+                                                            <input type="text" class="form-control"  id="idName" placeholder="Name" name="givenName" />
+                                                        </div>
+                                                        <hr/>
+                                                        <div class="form-group">
+                                                            <i> <img src="/sbi/resources/images/mobile.png"/></i>
+                                                            <input type="text" class="form-control" id="idPhoneNumber" placeholder="Phone Number" name="telephone" />
+                                                        </div>
+                                                    </div>
+                                                     
+                                                
+                                            <button type="button" id="btnRegister"  class="myButton pull-right">Register</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                     <div class="foter-text">
+                                 By registering I accept the 
+<a th:href="#{terms.services.url}">Terms of Services</a> and <a th:href="#{privacy.policy.url}">Privacy Policy</a>
+                        </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+        </div>
+ 
+<!-- contact -->
+
+<div class="footer">
+Powered by &nbsp;<img alt="" src="/sbi/resources/images/QuiskLogoSBI.png"/>
+</div>
+
+    <!-- Footer -->
+<script src="sbi/resources/js/jquery-latest.min.js" th:src="@{/resources/js/jquery-latest.min.js}"></script>
+<script src="sbi/resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script> 
+
+<script src="sbi/resources/js/jquery-ui.min.js" th:src="@{/resources/js/jquery-ui.min.js}"></script>
+<script src="sbi/resources/js/register.js" th:src="@{/resources/js/register.js}"></script>
+</body>
+
+</html>
